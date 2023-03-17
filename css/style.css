@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+:root {
+  --bg-black: #171819;
+  --bg-black-op: #171819b7;
+  --bg-dark: #212529;
+  --bg-orange: #f13a11;
+  --bg-white: #f9f9f9;
+  --text-white: #ffffff;
+  --text-gray: #909090;
+  --gray-light: #666262;
+  --gray-dark: #404040;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  transition: all 0.2s;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh 80vh 140vh 100vh 100vh 40vh;
+  position: relative;
+}
+
+.header {
+  grid-row: 1/2;
+  background-color: var(--bg-black);
+  background-image: linear-gradient(var(--bg-black-op), var(--bg-black-op)), url(../img/hero-bg.jpg);
+  background-position: center 1.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header--heading3 {
+  color: var(--gray-light);
+  font-size: 1.4rem;
+  text-transform: lowercase;
+  font-weight: 400;
+}
+.header--heading2 {
+  color: var(--text-white);
+  font-size: 3rem;
+  text-transform: uppercase;
+  width: 55%;
+  text-align: center;
+  font-weight: 800;
+  margin: 0.6rem 0 1.4rem;
+}
+.header--btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.header--btns > * {
+  background: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 1.2rem 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header--btns-btn1 {
+  border: none;
+  color: var(--text-white);
+}
+.header--btns-btn1:hover {
+  color: var(--bg-orange);
+}
+.header--btns-btn2 {
+  color: var(--bg-orange);
+  border: 1px solid var(--bg-orange);
+  padding: 0.8rem 1.5rem;
+  border-radius: 3px;
+}
+.header--btns-btn2:hover {
+  background-color: var(--bg-white);
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--bg-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 5rem;
+}
+.navbar--heading-link {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--text-white);
+}
+.navbar--heading-link:hover {
+  color: var(--bg-orange);
+}
+.navbar--ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.navbar--ul li {
+  padding: 0 1.2rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-white);
+  cursor: pointer;
+}
+.navbar--ul li:first-child, .navbar--ul li:hover:not(:last-child) {
+  color: var(--bg-orange);
+}
+.navbar--ul-icons i {
+  padding: 0 0.8rem 0;
+  font-size: 1.1rem;
+}
+.navbar--ul-icons i:hover {
+  color: var(--bg-orange);
+}
+
+.nav--responsive-btn {
+  background: none;
+  border: none;
+}
+.nav--responsive-btn i {
+  font-size: 1.8rem;
+  color: var(--bg-orange);
+}
+
+.nav--responsive {
+  display: none;
+}
+.nav--responsive .btn2 {
+  display: none;
+}
+
+.ul--responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .height {
+    height: 17rem;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content max-content;
+    overflow: hidden;
+    padding-top: 1.2rem;
+    transition: all 0.5s;
+  }
+  .navbar--heading {
+    padding-left: 1.5rem;
+  }
+  .navbar--ul {
+    display: none;
+  }
+  .nav--responsive {
+    display: block;
+    padding-right: 1.5rem;
+    justify-self: end;
+  }
+  .nav--responsive-btn {
+    cursor: pointer;
+  }
+  .ul--responsive {
+    padding-top: 0.9rem;
+    grid-column: 1/-1;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ul--responsive li {
+    cursor: pointer;
+    padding: 0.2rem 0;
+    color: var(--text-white);
+  }
+  .ul--responsive li:first-child, .ul--responsive li:hover:not(:last-child) {
+    color: var(--bg-orange);
+  }
+  .ul--responsive .responsive--ul-icons i {
+    padding: 0.8rem 0.5rem;
+  }
+  .ul--responsive .responsive--ul-icons i:hover {
+    color: var(--bg-orange);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

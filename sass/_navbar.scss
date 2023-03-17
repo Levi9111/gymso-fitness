@@ -1,0 +1,118 @@
+.navbar {
+  position: fixed;
+  background-color: var(--bg-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 5rem;
+  &--heading {
+    &-link {
+      text-decoration: none;
+      font-size: 2rem;
+      color: var(--text-white);
+      &:hover {
+        color: var(--bg-orange);
+      }
+    }
+  }
+  &--ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    li {
+      padding: 0 1.2rem 0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-white);
+      cursor: pointer;
+      &:first-child,
+      &:hover:not(:last-child) {
+        color: var(--bg-orange);
+      }
+    }
+    &-icons {
+      i {
+        padding: 0 0.8rem 0;
+        font-size: 1.1rem;
+        &:hover {
+          color: var(--bg-orange);
+        }
+      }
+    }
+  }
+}
+
+.nav--responsive-btn {
+  background: none;
+  border: none;
+  i {
+    font-size: 1.8rem;
+    color: var(--bg-orange);
+  }
+}
+
+.nav--responsive {
+  display: none;
+  .btn2 {
+    display: none;
+  }
+}
+
+.ul--responsive {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .height {
+    height: 17rem;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content max-content;
+    overflow: hidden;
+    padding-top: 1.2rem;
+    transition: all 0.5s;
+    &--heading {
+      padding-left: 1.5rem;
+    }
+  }
+  .navbar--ul {
+    display: none;
+  }
+  .nav--responsive {
+    display: block;
+    padding-right: 1.5rem;
+    justify-self: end;
+    &-btn {
+      cursor: pointer;
+    }
+  }
+  .ul--responsive {
+    padding-top: 0.9rem;
+    grid-column: 1/-1;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      cursor: pointer;
+      padding: 0.2rem 0;
+      color: var(--text-white);
+      &:first-child,
+      &:hover:not(:last-child) {
+        color: var(--bg-orange);
+      }
+    }
+    .responsive--ul-icons {
+      i {
+        padding: 0.8rem 0.5rem;
+        &:hover {
+          color: var(--bg-orange);
+        }
+      }
+    }
+  }
+}

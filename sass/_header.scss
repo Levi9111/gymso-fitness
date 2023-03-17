@@ -1,0 +1,59 @@
+.header {
+  grid-row: 1/2;
+  background-color: var(--bg-black);
+  background-image: linear-gradient((var(--bg-black-op)), var(--bg-black-op)),
+    url(../img/hero-bg.jpg);
+
+  background-position: center 1.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &--heading3 {
+    color: var(--gray-light);
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+  &--heading2 {
+    color: var(--text-white);
+    font-size: 3rem;
+    text-transform: uppercase;
+    width: 55%;
+    text-align: center;
+    font-weight: 800;
+    margin: 0.6rem 0 1.4rem;
+  }
+  &--btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    & > * {
+      background: none;
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin: 1.2rem 0.7rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    &-btn1 {
+      border: none;
+      color: var(--text-white);
+      &:hover {
+        color: var(--bg-orange);
+      }
+    }
+    &-btn2 {
+      color: var(--bg-orange);
+      border: 1px solid var(--bg-orange);
+      padding: 0.8rem 1.5rem;
+      border-radius: 3px;
+      &:hover {
+        background-color: var(--bg-white);
+      }
+    }
+  }
+}

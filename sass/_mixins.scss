@@ -1,0 +1,9 @@
+@mixin flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition {
+  transition: all 0.3s;
+}
