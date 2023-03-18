@@ -94,7 +94,7 @@
     padding-top: 0.9rem;
     grid-column: 1/-1;
     justify-self: center;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: center;
     li {
@@ -112,6 +112,16 @@
         &:hover {
           color: var(--bg-orange);
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .navbar {
+    &--heading {
+      &-link {
+        font-size: 1.3rem;
       }
     }
   }

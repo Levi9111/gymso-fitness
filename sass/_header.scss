@@ -1,4 +1,5 @@
 .header {
+  margin-top: 5rem;
   grid-row: 1/2;
   background-color: var(--bg-black);
   background-image: linear-gradient((var(--bg-black-op)), var(--bg-black-op)),
@@ -53,6 +54,22 @@
       border-radius: 3px;
       &:hover {
         background-color: var(--bg-white);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    &--heading3 {
+      font-size: 0.8rem;
+    }
+    &--heading2 {
+      font-size: 1.8rem;
+    }
+    &--btns {
+      & > * {
+        font-size: 0.7rem;
       }
     }
   }
