@@ -28,7 +28,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(65vh, max-content) 140vh 100vh 100vh 40vh;
+  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) 100vh 100vh 100vh 40vh;
   position: relative;
 }
 
@@ -306,6 +306,80 @@ body {
   .navbar--heading-link {
     font-size: 1.3rem;
   }
+}
+.instructors {
+  background-color: var(--bg-white);
+  padding: 3rem 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 5rem;
+}
+.instructors--intro {
+  grid-column: 1/2;
+  display: grid;
+  place-content: center;
+  padding: 2.2rem;
+}
+.instructors--intro-heading {
+  color: var(--bg-dark);
+  font-size: 2.3rem;
+  margin-bottom: 1.3rem;
+}
+.instructors--intro-pera {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gray-light);
+  margin-bottom: 1.2rem;
+}
+.instructors--intro-pera a {
+  color: var(--gray-dark);
+}
+.instructors--intro-pera a:hover {
+  color: var(--bg-orange);
+}
+.instructors--card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  place-content: center;
+}
+.instructors--card .card {
+  background-color: var(--text-white);
+  box-shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
+}
+.instructors--card .card img {
+  width: 100%;
+}
+.instructors--card .card--details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+.instructors--card .card--details-instructor .name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.instructors--card .card--details-instructor .profession {
+  font-size: 1rem;
+  color: var(--gray-dark);
+  font-weight: 500;
+}
+.instructors--card .card--details-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.instructors--card .card--details-icon i {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  color: var(--gray-dark);
+  cursor: pointer;
+}
+.instructors--card .card--details-icon i:hover {
+  color: var(--bg-orange);
 }
 
 /*# sourceMappingURL=style.css.map */

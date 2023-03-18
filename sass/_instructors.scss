@@ -1,0 +1,79 @@
+.instructors {
+  background-color: var(--bg-white);
+  padding: 3rem 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 5rem;
+  &--intro {
+    grid-column: 1/2;
+    display: grid;
+    place-content: center;
+    padding: 2.2rem;
+    &-heading {
+      color: var(--bg-dark);
+      font-size: 2.3rem;
+      margin-bottom: 1.3rem;
+    }
+    &-pera {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--gray-light);
+      margin-bottom: 1.2rem;
+      a {
+        color: var(--gray-dark);
+        &:hover {
+          color: var(--bg-orange);
+        }
+      }
+    }
+  }
+
+  &--card {
+    display: grid;
+    // grid-template-columns: 15rem 15rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+    place-content: center;
+
+    .card {
+      background-color: var(--text-white);
+      box-shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
+      img {
+        width: 100%;
+      }
+      &--details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem;
+        &-instructor {
+          .name {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+          }
+          .profession {
+            font-size: 1rem;
+            color: var(--gray-dark);
+            font-weight: 500;
+          }
+        }
+        &-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          i {
+            font-size: 1.3rem;
+            padding: 0.3rem;
+            color: var(--gray-dark);
+            cursor: pointer;
+            &:hover {
+              color: var(--bg-orange);
+            }
+          }
+        }
+      }
+    }
+  }
+}

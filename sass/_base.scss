@@ -29,6 +29,6 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(65vh, max-content) 140vh 100vh 100vh 40vh;
+  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) 100vh 100vh 100vh 40vh;
   position: relative;
 }
