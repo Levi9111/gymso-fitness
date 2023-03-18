@@ -1,0 +1,35 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.2rem 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  place-content: center;
+  &--copy {
+    display: grid;
+    place-content: center;
+    margin: 1.5rem;
+    &-text {
+    }
+    &-design {
+      a {
+        color: var(--gray-dark);
+        font-weight: 600;
+      }
+    }
+  }
+  &--email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    i {
+      font-size: 1.3rem;
+      color: var(--bg-orange);
+    }
+    a {
+      margin-left: 0.4rem;
+      color: var(--gray-dark);
+      font-weight: 500;
+    }
+  }
+}

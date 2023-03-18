@@ -9,6 +9,7 @@
   --text-gray: #909090;
   --gray-light: #666262;
   --gray-dark: #404040;
+  --border: #efebeb;
   --shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
 }
 
@@ -33,7 +34,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) repeat(3, minmax(100vh, max-content)) 40vh;
+  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) repeat(3, minmax(100vh, max-content)) 20vh;
   position: relative;
 }
 
@@ -107,6 +108,38 @@ body {
     font-size: 0.7rem;
   }
 }
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.2rem 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  place-content: center;
+}
+.footer--copy {
+  display: grid;
+  place-content: center;
+  margin: 1.5rem;
+}
+.footer--copy-design a {
+  color: var(--gray-dark);
+  font-weight: 600;
+}
+.footer--email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem;
+}
+.footer--email i {
+  font-size: 1.3rem;
+  color: var(--bg-orange);
+}
+.footer--email a {
+  margin-left: 0.4rem;
+  color: var(--gray-dark);
+  font-weight: 500;
+}
+
 .location {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -274,6 +307,7 @@ body {
   font-weight: 800;
 }
 .table--timetable {
+  display: none;
   display: grid;
   place-content: center;
 }
@@ -322,6 +356,7 @@ body {
     padding: 2rem 0;
   }
   .table--responsive {
+    display: none;
     width: 40%;
     margin: 0 auto;
     overflow-x: scroll;

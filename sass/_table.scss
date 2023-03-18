@@ -12,6 +12,8 @@
     }
   }
   &--timetable {
+    display: none;
+
     display: grid;
     place-content: center;
 
@@ -75,6 +77,7 @@
   .table {
     padding: 2rem 0;
     &--responsive {
+      display: none;
       width: 40%;
       margin: 0 auto;
       overflow-x: scroll;

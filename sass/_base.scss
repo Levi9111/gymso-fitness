@@ -10,6 +10,7 @@
   --text-gray: #909090;
   --gray-light: #666262;
   --gray-dark: #404040;
+  --border: #efebeb;
   --shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
 }
 
@@ -39,6 +40,6 @@ body {
       3,
       minmax(100vh, max-content)
     )
-    40vh;
+    20vh;
   position: relative;
 }
