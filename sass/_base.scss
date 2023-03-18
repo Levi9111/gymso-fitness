@@ -35,11 +35,10 @@ body {
 .container {
   display: grid;
   grid-template-rows:
-    100vh minmax(65vh, max-content) minmax(80vh, max-content) minmax(
-      100vh,
-      max-content
+    100vh minmax(65vh, max-content) minmax(80vh, max-content) repeat(
+      3,
+      minmax(100vh, max-content)
     )
-    minmax(100vh, max-content)
-    100vh 40vh;
+    40vh;
   position: relative;
 }
