@@ -9,6 +9,7 @@
   --text-gray: #909090;
   --gray-light: #666262;
   --gray-dark: #404040;
+  --shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
 }
 
 body {
@@ -28,7 +29,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) 100vh 100vh 100vh 40vh;
+  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) minmax(100vh, max-content) 100vh 100vh 40vh;
   position: relative;
 }
 
@@ -193,6 +194,75 @@ body {
     padding-left: 0;
   }
 }
+.training {
+  display: grid;
+  grid-template-rows: max-content max-content;
+}
+.training--label {
+  text-align: center;
+  padding: 3.5rem;
+}
+.training--label-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--gray-light);
+}
+.training--label-heading {
+  font-size: 2.2rem;
+  letter-spacing: -3px;
+}
+.training--card {
+  grid-column: 2/-1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 3rem;
+  padding: 0 7rem;
+}
+.training--card .card {
+  box-shadow: var(--shadow);
+}
+.training--card img {
+  width: 100%;
+}
+.training--card-description {
+  padding: 1.1rem 2rem;
+  position: relative;
+  z-index: -11;
+}
+.training--card-name {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.training--card-instructor {
+  margin: 0.4rem 0;
+  text-transform: capitalize;
+}
+.training--card-instructor span {
+  color: var(--gray-light);
+  font-weight: 700;
+}
+.training--card-text {
+  font-size: 1.1rem;
+  color: var(--gray-light);
+}
+.training--card-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-white);
+  background-color: var(--bg-orange);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.3rem;
+  z-index: -11;
+}
+
 .navbar {
   position: fixed;
   background-color: var(--bg-black);
@@ -345,7 +415,7 @@ body {
 }
 .instructors--card .card {
   background-color: var(--text-white);
-  box-shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--shadow);
 }
 .instructors--card .card img {
   width: 100%;

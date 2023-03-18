@@ -10,6 +10,7 @@
   --text-gray: #909090;
   --gray-light: #666262;
   --gray-dark: #404040;
+  --shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
 }
 
 body {
@@ -29,6 +30,11 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) 100vh 100vh 100vh 40vh;
+  grid-template-rows:
+    100vh minmax(65vh, max-content) minmax(80vh, max-content) minmax(
+      100vh,
+      max-content
+    )
+    100vh 100vh 40vh;
   position: relative;
 }

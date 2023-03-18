@@ -30,14 +30,13 @@
 
   &--card {
     display: grid;
-    // grid-template-columns: 15rem 15rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 2rem;
     place-content: center;
 
     .card {
       background-color: var(--text-white);
-      box-shadow: -2px 4px 13px -8px rgba(0, 0, 0, 0.75);
+      box-shadow: var(--shadow);
       img {
         width: 100%;
       }
