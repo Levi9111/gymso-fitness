@@ -27,9 +27,13 @@ body {
   transition: all 0.2s;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   display: grid;
-  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) minmax(100vh, max-content) 100vh 100vh 40vh;
+  grid-template-rows: 100vh minmax(65vh, max-content) minmax(80vh, max-content) minmax(100vh, max-content) minmax(100vh, max-content) 100vh 40vh;
   position: relative;
 }
 
@@ -192,6 +196,72 @@ body {
   .membership--routine div {
     border-left: none;
     padding-left: 0;
+  }
+}
+.table {
+  width: 100%;
+  background-color: var(--bg-black);
+}
+.table--label-heading {
+  color: var(--text-white);
+  font-weight: 800;
+}
+.table--timetable {
+  display: grid;
+  place-content: center;
+}
+.table--timetable table {
+  border-collapse: collapse;
+  text-transform: uppercase;
+}
+.table--timetable table thead th {
+  background-color: var(--bg-orange);
+  border: 1px solid var(--bg-dark);
+  color: var(--text-white);
+  height: 4rem;
+  font-size: 1rem;
+}
+.table--timetable table thead th:not(:first-child) {
+  width: 10rem;
+}
+.table--timetable table thead th:first-child {
+  width: 6rem;
+}
+.table--timetable table tbody td {
+  text-align: center;
+  height: 5rem;
+  border: 1px solid var(--bg-dark);
+}
+.table--timetable table tbody td strong {
+  display: block;
+  color: var(--text-white);
+}
+.table--timetable table tbody td span {
+  color: var(--gray-light);
+}
+.table--timetable table tbody td small {
+  color: var(--text-white);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table--timetable table tbody td:first-child {
+  background-color: var(--bg-orange);
+}
+
+@media screen and (max-width: 700px) {
+  .table {
+    padding: 2rem 0;
+  }
+  .table--responsive {
+    width: 40%;
+    margin: 0 auto;
+    overflow-x: scroll;
+  }
+  .table--timetable {
+    height: 60rem;
+    width: 70rem;
   }
 }
 .training {

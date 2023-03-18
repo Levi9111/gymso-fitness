@@ -1,2 +1,86 @@
 .table {
+  width: 100%;
+  background-color: var(--bg-black);
+
+  &--label {
+    &-text {
+    }
+    &-heading {
+      color: var(--text-white);
+      font-weight: 800;
+    }
+  }
+  &--timetable {
+    display: grid;
+    place-content: center;
+
+    table {
+      border-collapse: collapse;
+      text-transform: uppercase;
+      thead {
+        tr {
+        }
+        th {
+          background-color: var(--bg-orange);
+          border: 1px solid var(--bg-dark);
+          color: var(--text-white);
+          height: 4rem;
+          font-size: 1rem;
+          &:not(:first-child) {
+            width: 10rem;
+          }
+          &:first-child {
+            width: 6rem;
+          }
+        }
+        i {
+        }
+      }
+
+      tbody {
+        tr {
+          .td {
+          }
+        }
+        td {
+          text-align: center;
+          height: 5rem;
+          border: 1px solid var(--bg-dark);
+          strong {
+            display: block;
+            color: var(--text-white);
+          }
+          span {
+            color: var(--gray-light);
+          }
+
+          small {
+            color: var(--text-white);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          &:first-child {
+            background-color: var(--bg-orange);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .table {
+    padding: 2rem 0;
+    &--responsive {
+      width: 40%;
+      margin: 0 auto;
+      overflow-x: scroll;
+    }
+    &--timetable {
+      height: 60rem;
+      width: 70rem;
+    }
+  }
 }
