@@ -4,12 +4,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   place-content: center;
+  text-align: center;
   &--copy {
     display: grid;
     place-content: center;
     margin: 1.5rem;
-    &-text {
-    }
     &-design {
       a {
         color: var(--gray-dark);
@@ -31,5 +30,18 @@
       color: var(--gray-dark);
       font-weight: 500;
     }
+  }
+}
+
+@media screen and (max-width) {
+  .footer{
+    overflow: hidden;
+  padding: 0;
+&--copy{
+  margin: 0;
+};
+&--email{
+  margin: 0 auto;
+};
   }
 }

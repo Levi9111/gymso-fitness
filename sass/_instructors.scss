@@ -76,3 +76,23 @@
     }
   }
 }
+
+@media screen and (max-width:700px) {
+  .instructors {
+    overflow: hidden;
+    padding: 0;
+    &--intro{
+      width: 90%;
+      margin: auto;
+      &-heading,&-pera{
+        text-align: center;
+      };
+    };
+    &--card{
+      width: 80%;
+      margin: auto;
+      padding:0 2rem;
+    };
+  }
+  
+}

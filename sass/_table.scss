@@ -4,8 +4,6 @@
   // display: none;
 
   &--label {
-    &-text {
-    }
     &-heading {
       color: var(--text-white);
       font-weight: 800;
@@ -71,5 +69,18 @@
   table tbody {
     display: table;
     width: 100%;
+  }
+}
+
+
+@media screen and (max-width:700px) {
+  .table{
+    padding:1.8rem 1.4rem 0;
+    overflow: hidden;
+    &--label{
+      &-heading{
+        margin-top: 0.9rem;
+      };
+    };
   }
 }

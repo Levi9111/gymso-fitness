@@ -78,7 +78,8 @@
 
 @media only screen and (max-width: 750px) {
   .membership {
-    padding: 3rem;
+    padding: 1rem;
+    overflow: hidden;
     &--plan {
       justify-items: start;
       div {

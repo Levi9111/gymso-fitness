@@ -119,6 +119,7 @@
 
 @media only screen and (max-width: 510px) {
   .navbar {
+    overflow: hidden;
     &--heading {
       &-link {
         font-size: 1.3rem;

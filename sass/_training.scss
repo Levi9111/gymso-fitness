@@ -33,8 +33,6 @@
       position: relative;
       z-index: -11;
     }
-    &-conatiner {
-    }
     &-name {
       font-size: 1.7rem;
       font-weight: 700;
@@ -68,4 +66,19 @@
       z-index: -11;
     }
   }
+}
+
+@media screen and (max-width:700px) {
+  .training{
+    margin-top: 1.6rem;
+    overflow: hidden;
+    &--label{
+      padding:.7rem 0;
+
+    };
+    &--card{
+      padding: .8rem;
+    };
+  }
+  
 }

@@ -39,17 +39,17 @@ body {
 }
 
 .header {
-  margin-top: 5rem;
   grid-row: 1/2;
+  width: 100%;
+  margin-top: 5rem;
   background-color: var(--bg-black);
   background-image: linear-gradient(var(--bg-black-op), var(--bg-black-op)), url(../img/hero-bg.jpg);
   background-position: center 1.2rem;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
+  text-align: center;
 }
 .header--heading3 {
   color: var(--gray-light);
@@ -61,10 +61,10 @@ body {
   color: var(--text-white);
   font-size: 3rem;
   text-transform: uppercase;
-  width: 55%;
   text-align: center;
   font-weight: 800;
-  margin: 0.6rem 0 1.4rem;
+  width: 55%;
+  margin: auto;
 }
 .header--btns {
   display: flex;
@@ -98,13 +98,24 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+  .header {
+    overflow: hidden;
+  }
   .header--heading3 {
     font-size: 0.8rem;
   }
   .header--heading2 {
     font-size: 1.8rem;
+    width: 80%;
+    margin-top: 1.2rem;
+  }
+  .header--btns {
+    display: grid;
+    place-content: center;
+    margin: 1.2rem;
   }
   .header--btns > * {
+    margin: 0.6rem;
     font-size: 0.7rem;
   }
 }
@@ -114,6 +125,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   place-content: center;
+  text-align: center;
 }
 .footer--copy {
   display: grid;
@@ -140,6 +152,18 @@ body {
   font-weight: 500;
 }
 
+@media screen and (max-width) {
+  .footer {
+    overflow: hidden;
+    padding: 0;
+  }
+  .footer--copy {
+    margin: 0;
+  }
+  .footer--email {
+    margin: 0 auto;
+  }
+}
 .location {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -181,6 +205,10 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin: auto;
+}
+.location--address iframe {
+  width: 100%;
 }
 .location--address-heading {
   font-size: 2rem;
@@ -203,8 +231,20 @@ body {
 }
 
 @media screen and (max-width: 870px) {
+  .location {
+    overflow: hidden;
+    margin-top: 1.6rem;
+  }
   .location--form, .location--address {
     align-items: center;
+  }
+  .location--form {
+    margin: auto;
+  }
+  .location--address {
+    width: 75%;
+    padding-bottom: 1.6rem;
+    text-align: center;
   }
 }
 .membership {
@@ -285,7 +325,8 @@ body {
 
 @media only screen and (max-width: 750px) {
   .membership {
-    padding: 3rem;
+    padding: 1rem;
+    overflow: hidden;
   }
   .membership--plan {
     justify-items: start;
@@ -361,6 +402,15 @@ body {
   width: 100%;
 }
 
+@media screen and (max-width: 700px) {
+  .table {
+    padding: 1.8rem 1.4rem 0;
+    overflow: hidden;
+  }
+  .table--label-heading {
+    margin-top: 0.9rem;
+  }
+}
 .training {
   display: grid;
   grid-template-rows: max-content max-content;
@@ -430,6 +480,18 @@ body {
   z-index: -11;
 }
 
+@media screen and (max-width: 700px) {
+  .training {
+    margin-top: 1.6rem;
+    overflow: hidden;
+  }
+  .training--label {
+    padding: 0.7rem 0;
+  }
+  .training--card {
+    padding: 0.8rem;
+  }
+}
 .navbar {
   position: fixed;
   background-color: var(--bg-black);
@@ -540,6 +602,9 @@ body {
   }
 }
 @media only screen and (max-width: 510px) {
+  .navbar {
+    overflow: hidden;
+  }
   .navbar--heading-link {
     font-size: 1.3rem;
   }
@@ -617,6 +682,25 @@ body {
 }
 .instructors--card .card--details-icon i:hover {
   color: var(--bg-orange);
+}
+
+@media screen and (max-width: 700px) {
+  .instructors {
+    overflow: hidden;
+    padding: 0;
+  }
+  .instructors--intro {
+    width: 90%;
+    margin: auto;
+  }
+  .instructors--intro-heading, .instructors--intro-pera {
+    text-align: center;
+  }
+  .instructors--card {
+    width: 80%;
+    margin: auto;
+    padding: 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
